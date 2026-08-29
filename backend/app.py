@@ -1,3 +1,4 @@
+import summery_generator
 from flask import Flask, jsonify, request
 from flask_cors import CORS
 import pandas as pd
@@ -28,13 +29,12 @@ def load_data():
     return df
 
 
-@app.route('/api/issue-review', methods=['POST'])
+@app.route('/api/generate-issue-review', methods=['POST'])
 def generate_issue_review():
 
     try:
-        
+
         # 1. Get request data
-        
 
         req_data = request.get_json()
 
@@ -86,14 +86,30 @@ def generate_issue_review():
                 "comment_count": 0
             }), 404
 
-        
         # 4. Generate AI review
 
-        summary = summarizer.generate(
-            keyword=analysis.get("keyword", ""),
-            issue=issue_category,
-            comments=issue_comments
-        )
+        review_payload = {
+            "keyword": analysis.get("keyword", ""),
+            "kpis": analysis.get("kpis", {}),
+            "chart_data": analysis.get("chart_data", []),
+            "issue_chart_data": [
+                entry for entry in analysis.get("issue_chart_data", [])
+                if entry.get("issue") == issue_category
+            ],
+            "action_data": analysis.get("action_data", []),
+            "comments": issue_comments
+        }
+
+        summary_result = summery_generator.summarize_feedback(review_payload)
+
+        if summary_result["status"] == "error":
+            return jsonify({
+                "success": False,
+                "error": "Failed to generate issue review",
+                "details": summary_result.get("error")
+            }), 500
+
+        summary = summary_result["summary"]
 
         # -----------------------------------------
         # 5. Calculate some metadata
@@ -111,17 +127,12 @@ def generate_issue_review():
 
         for comment in issue_comments:
 
-            # Sentiment
             sentiment = comment.get("sentiment")
 
             if sentiment in sentiment_counts:
                 sentiment_counts[sentiment] += 1
 
-            # Platform
-            platform = comment.get(
-                "source",
-                "Unknown"
-            )
+            platform = comment.get("source", "Unknown")
 
             platform_counts[platform] = (
                 platform_counts.get(platform, 0) + 1
@@ -143,10 +154,8 @@ def generate_issue_review():
 
         if positive > negative:
             overall_sentiment = "Positive"
-
         elif negative > positive:
             overall_sentiment = "Negative"
-
         else:
             overall_sentiment = "Neutral"
 
@@ -156,13 +165,8 @@ def generate_issue_review():
 
         return jsonify({
             "success": True,
-
             "analysis_id": analysis_id,
-
-            "keyword": analysis.get(
-                "keyword",
-                ""
-            ),
+            "keyword": analysis.get("keyword", ""),
 
             "issue": {
                 "category": issue_category,
@@ -177,16 +181,9 @@ def generate_issue_review():
             },
 
             "platforms": [
-                {
-                    "platform": platform,
-                    "count": count
-                }
+                {"platform": platform, "count": count}
                 for platform, count
-                in sorted(
-                    platform_counts.items(),
-                    key=lambda x: x[1],
-                    reverse=True
-                )
+                in sorted(platform_counts.items(), key=lambda x: x[1], reverse=True)
             ],
 
             "review": {
@@ -196,9 +193,7 @@ def generate_issue_review():
 
     except Exception as e:
 
-        print(
-            f"Error generating issue review: {e}"
-        )
+        print(f"Error generating issue review: {e}")
 
         return jsonify({
             "success": False,
@@ -288,7 +283,6 @@ def analyze_product():
         ],
         "comments": df.to_dict(orient="records")
     }
-
 
     analysis_id = storage.save(response)
 

@@ -95,7 +95,10 @@ function App() {
       console.log("Analysis response:", response.data);
 
       setData(response.data);
+      console.log(`analysisId ${response.data.analysis_id}`)
       setAnalysisId(response.data.analysis_id);
+      console.log(`after analysisId ${response.data.analysis_id}`)
+
     } catch (err) {
       console.error("Error analyzing feedback:", err);
 
@@ -642,7 +645,7 @@ function App() {
       <InsightPanel
         insight={selectedInsight}
         comments={data.comments || []}
-        analysisId={data.analysisId}
+        analysisId={data.analysis_id}
         onClear={() => setSelectedInsight(null)}
         onViewComments={(comments) => {
           console.log("Related comments:", comments);

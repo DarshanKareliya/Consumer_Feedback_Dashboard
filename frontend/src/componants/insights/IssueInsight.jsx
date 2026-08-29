@@ -35,6 +35,15 @@ function IssueInsight({
   }, [comments, issue]);
 
   const generateReview = async () => {
+    console.log("called genrate reviewsssssssssss")
+    console.log(`loading reviview`)
+    console.log(` reviview`)
+    console.log(`loading reviview`)
+    console.log(`issue ${issue}`)
+    console.log(`Analysis ID ${analysisId}`)
+
+
+
     if (!analysisId || !issue) {
       return;
     }
@@ -44,7 +53,8 @@ function IssueInsight({
     setReview("");
 
     try {
-      const response = await fetch("/api/issue-insights", {
+      console.log("CALLLLLLLINGGGGGGGG ReVVIRE")
+      const response = await fetch("http://127.0.0.1:5000/api/generate-issue-review", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -63,7 +73,7 @@ function IssueInsight({
 
       const data = await response.json();
 
-      setReview(data.summary);
+      setReview(data.review.summary);
     } catch (error) {
       console.error("Review generation failed:", error);
 
