@@ -1,0 +1,51 @@
+{
+  "macro_f1": 0.7687281865140304,
+  "weighted_f1": 0.7685476954986937,
+  "quadratic_weighted_kappa": 0.9081808767690714,
+  "mean_absolute_error": 0.26785714285714285,
+  "confusion_matrix": [
+    [
+      8,
+      3,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      11,
+      1,
+      0,
+      0
+    ],
+    [
+      0,
+      2,
+      6,
+      3,
+      0
+    ],
+    [
+      0,
+      1,
+      0,
+      10,
+      0
+    ],
+    [
+      0,
+      0,
+      1,
+      2,
+      8
+    ]
+  ],
+  "class_names": [
+    "Very Negative",
+    "Negative",
+    "Neutral",
+    "Positive",
+    "Very Positive"
+  ],
+  "n_examples": 56
+}

@@ -1,0 +1,57 @@
+text,label,predicted_label,predicted_class,true_class
+"This laptop died after two weeks. Complete waste of money, I want a full refund.",0,0,Very Negative,Very Negative
+Absolutely terrible product. It arrived broken and customer service ignored every email.,0,0,Very Negative,Very Negative
+Worst purchase I have ever made. It stopped charging on day one and support was useless.,0,0,Very Negative,Very Negative
+Do not buy this. It caught fire while charging and the company refuses to respond.,0,1,Negative,Very Negative
+I am furious. The screen shattered on arrival and they will not process my refund.,0,0,Very Negative,Very Negative
+"Garbage build quality, it fell apart in my hands within a week. Never buying this brand again.",0,1,Negative,Very Negative
+"Total scam, the product never arrived and support keeps closing my tickets without a reply.",0,0,Very Negative,Very Negative
+This app deletes my data constantly and support has ghosted me for a month. Disgraceful.,0,0,Very Negative,Very Negative
+The battery swelled up and nearly damaged my bag. Extremely dangerous and unacceptable.,0,0,Very Negative,Very Negative
+"I regret this purchase entirely, it is defective and the seller is dodging my refund request.",0,1,Negative,Very Negative
+"Completely unusable out of the box, and the return window had already closed by the time it arrived.",0,0,Very Negative,Very Negative
+The battery life is much worse than advertised and it overheats during normal use.,1,1,Negative,Negative
+Shipping took three weeks longer than promised and the box arrived dented.,1,1,Negative,Negative
+The app crashes frequently and I have to restart my phone to fix it.,1,1,Negative,Negative
+Customer support took days to respond and the solution they gave did not work.,1,1,Negative,Negative
+The build feels cheap and a button already stopped working after a month.,1,1,Negative,Negative
+I was charged twice for the same order and it took forever to get one refund back.,1,1,Negative,Negative
+"The camera quality is disappointing in low light, noticeably worse than the previous model.",1,1,Negative,Negative
+Setup was frustrating and the included manual barely explains anything.,1,1,Negative,Negative
+"The fabric started pilling after just two washes, not what I expected for the price.",1,1,Negative,Negative
+"Tracking says delivered but I never received the package, still waiting on a response.",1,1,Negative,Negative
+The fan is louder than my old laptop and gets distracting during calls.,1,1,Negative,Negative
+A software update broke a feature I relied on daily and there is no fix yet.,1,2,Neutral,Negative
+"It works as described, nothing special but nothing wrong either.",2,2,Neutral,Neutral
+"Arrived on time. Packaging was standard, product matches the listing.",2,2,Neutral,Neutral
+"It's an average headset, sound quality is fine for casual use.",2,2,Neutral,Neutral
+"The instructions were okay, I figured out the rest on my own.",2,3,Positive,Neutral
+Does the job. I have no strong opinion about it either way.,2,2,Neutral,Neutral
+"Delivery was fine, the size is as expected based on the description.",2,2,Neutral,Neutral
+"It's a decent mid-range option, comparable to similar products at this price.",2,3,Positive,Neutral
+"Some features are useful, others I never use. Overall it is an okay purchase.",2,3,Positive,Neutral
+The color is slightly different from the photo but otherwise matches expectations.,2,1,Negative,Neutral
+It replaced my old one with no real improvement or downgrade that I noticed.,2,2,Neutral,Neutral
+"Customer service answered my question, though it took a couple of days.",2,1,Negative,Neutral
+"I'm happy with this purchase, the battery lasts most of the day and setup was easy.",3,3,Positive,Positive
+"Good value for the price, the build quality feels solid so far.",3,3,Positive,Positive
+Shipping was faster than expected and the packaging protected it well.,3,3,Positive,Positive
+The app is smooth and the recent update fixed the bugs I had before.,3,3,Positive,Positive
+"Support resolved my issue within a day, appreciated the quick help.",3,3,Positive,Positive
+"The sound quality is quite good for this price range, I'd recommend it.",3,3,Positive,Positive
+Comfortable to wear all day and the material feels nicer than I expected.,3,3,Positive,Positive
+Works well with my other devices and the setup guide was clear.,3,3,Positive,Positive
+"Noticeably better battery life than my previous model, happy with the upgrade.",3,3,Positive,Positive
+The customer support team was polite and fixed my billing issue quickly.,3,3,Positive,Positive
+"Great little upgrade over the last version, camera improvements are noticeable.",3,1,Negative,Positive
+Absolutely love this product! Battery lasts two full days and the screen is gorgeous.,4,4,Very Positive,Very Positive
+"Best purchase I've made all year, exceeded every expectation I had.",4,4,Very Positive,Very Positive
+Incredible build quality and the customer support team went above and beyond to help me.,4,3,Positive,Very Positive
+"This exceeded my expectations in every way, I recommend it to everyone I know.",4,4,Very Positive,Very Positive
+"Flawless experience from ordering to delivery, and the product itself is outstanding.",4,4,Very Positive,Very Positive
+"The performance boost is amazing, everything feels instant now. Worth every penny.",4,4,Very Positive,Very Positive
+"I'm blown away by the sound quality, easily the best headphones I've owned.",4,4,Very Positive,Very Positive
+Support fixed my problem in minutes and even followed up the next day. Fantastic service.,4,2,Neutral,Very Positive
+"This is a masterpiece of design, comfortable, fast, and beautiful. Couldn't be happier.",4,4,Very Positive,Very Positive
+"Ten out of ten, would buy again in a heartbeat. Genuinely impressed by the quality.",4,3,Positive,Very Positive
+"Perfect in every way, arrived early, works flawlessly, and looks even better in person.",4,4,Very Positive,Very Positive

@@ -1,0 +1,60 @@
+{
+  "per_label": [
+    {
+      "label": "Bug / Software Defect",
+      "precision": 0.2222222222222222,
+      "recall": 1.0,
+      "f1": 0.36363636363636365,
+      "support": 8
+    },
+    {
+      "label": "Hardware / Physical Defect",
+      "precision": 0.21212121212121213,
+      "recall": 1.0,
+      "f1": 0.35,
+      "support": 7
+    },
+    {
+      "label": "Shipping / Delivery Delay",
+      "precision": 0.24,
+      "recall": 1.0,
+      "f1": 0.3870967741935484,
+      "support": 6
+    },
+    {
+      "label": "Billing / Refund Dispute",
+      "precision": 0.4375,
+      "recall": 1.0,
+      "f1": 0.6086956521739131,
+      "support": 7
+    },
+    {
+      "label": "Customer Service / Support Issue",
+      "precision": 0.22857142857142856,
+      "recall": 1.0,
+      "f1": 0.37209302325581395,
+      "support": 8
+    },
+    {
+      "label": "Feature Request / Missing Functionality",
+      "precision": 0.17142857142857143,
+      "recall": 1.0,
+      "f1": 0.2926829268292683,
+      "support": 6
+    }
+  ],
+  "micro_f1": 0.3783783783783784,
+  "macro_f1": 0.3957007900148178,
+  "hamming_loss": 0.6388888888888888,
+  "jaccard_samples_avg": 0.24027777777777778,
+  "jaccard_macro_avg": 0.25197390572390577,
+  "n_examples": 36,
+  "label_names": [
+    "Bug / Software Defect",
+    "Hardware / Physical Defect",
+    "Shipping / Delivery Delay",
+    "Billing / Refund Dispute",
+    "Customer Service / Support Issue",
+    "Feature Request / Missing Functionality"
+  ]
+}

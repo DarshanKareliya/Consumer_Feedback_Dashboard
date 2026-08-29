@@ -1,0 +1,208 @@
+{
+  "rouge": {
+    "averages": {
+      "rouge1": {
+        "precision": 0.03132370283018868,
+        "recall": 0.04310344827586207,
+        "fmeasure": 0.03573570571771292
+      },
+      "rouge2": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "fmeasure": 0.0
+      },
+      "rougeL": {
+        "precision": 0.02115271226415094,
+        "recall": 0.030172413793103446,
+        "fmeasure": 0.02449020391843263
+      }
+    },
+    "per_example": [
+      {
+        "rouge1": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "fmeasure": 0.0
+        },
+        "rouge2": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "fmeasure": 0.0
+        },
+        "rougeL": {
+          "precision": 0,
+          "recall": 0,
+          "fmeasure": 0
+        }
+      },
+      {
+        "rouge1": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "fmeasure": 0.0
+        },
+        "rouge2": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "fmeasure": 0.0
+        },
+        "rougeL": {
+          "precision": 0,
+          "recall": 0,
+          "fmeasure": 0
+        }
+      },
+      {
+        "rouge1": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "fmeasure": 0.0
+        },
+        "rouge2": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "fmeasure": 0.0
+        },
+        "rougeL": {
+          "precision": 0,
+          "recall": 0,
+          "fmeasure": 0
+        }
+      },
+      {
+        "rouge1": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "fmeasure": 0.0
+        },
+        "rouge2": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "fmeasure": 0.0
+        },
+        "rougeL": {
+          "precision": 0,
+          "recall": 0,
+          "fmeasure": 0
+        }
+      },
+      {
+        "rouge1": {
+          "precision": 0.15625,
+          "recall": 0.1724137931034483,
+          "fmeasure": 0.1639344262295082
+        },
+        "rouge2": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "fmeasure": 0.0
+        },
+        "rougeL": {
+          "precision": 0.09375,
+          "recall": 0.10344827586206896,
+          "fmeasure": 0.09836065573770493
+        }
+      },
+      {
+        "rouge1": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "fmeasure": 0.0
+        },
+        "rouge2": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "fmeasure": 0.0
+        },
+        "rougeL": {
+          "precision": 0,
+          "recall": 0,
+          "fmeasure": 0
+        }
+      },
+      {
+        "rouge1": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "fmeasure": 0.0
+        },
+        "rouge2": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "fmeasure": 0.0
+        },
+        "rougeL": {
+          "precision": 0,
+          "recall": 0,
+          "fmeasure": 0
+        }
+      },
+      {
+        "rouge1": {
+          "precision": 0.09433962264150944,
+          "recall": 0.1724137931034483,
+          "fmeasure": 0.12195121951219515
+        },
+        "rouge2": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "fmeasure": 0.0
+        },
+        "rougeL": {
+          "precision": 0.07547169811320754,
+          "recall": 0.13793103448275862,
+          "fmeasure": 0.0975609756097561
+        }
+      }
+    ]
+  },
+  "bertscore": {
+    "averages": {
+      "precision": 0.14218643307685852,
+      "recall": 0.15051984786987305,
+      "f1": 0.14618492126464844
+    },
+    "per_example": [
+      {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      {
+        "precision": 0.5412249565124512,
+        "recall": 0.5951203107833862,
+        "f1": 0.56689453125
+      },
+      {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      {
+        "precision": 0.5962664484977722,
+        "recall": 0.6090384721755981,
+        "f1": 0.6025847792625427
+      }
+    ]
+  }
+}

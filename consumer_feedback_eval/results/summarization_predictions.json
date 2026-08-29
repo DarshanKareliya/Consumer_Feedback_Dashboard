@@ -1,0 +1,50 @@
+[
+  {
+    "id": "sum_01",
+    "keyword": "WirelessBuds Pro",
+    "reference_summary": "Customers consistently report that the WirelessBuds Pro suffer from significantly shorter battery life than advertised, with some units failing entirely after a few months, and support's reset suggestion has not resolved the issue.",
+    "generated_summary": ""
+  },
+  {
+    "id": "sum_02",
+    "keyword": "SmartHome Hub X2",
+    "reference_summary": "While customers appreciate the SmartHome Hub X2's easy setup and voice control features, the most frequent complaint is unstable wifi connectivity that causes automations to fail and requires periodic restarts.",
+    "generated_summary": ""
+  },
+  {
+    "id": "sum_03",
+    "keyword": "FreshBrew Coffee Maker",
+    "reference_summary": "Customers report recurring hardware issues with the FreshBrew Coffee Maker, particularly reservoir leaks and shipping damage, compounded by slow or unresponsive customer support when requesting replacements.",
+    "generated_summary": ""
+  },
+  {
+    "id": "sum_04",
+    "keyword": "TrailRunner Hiking Boots",
+    "reference_summary": "Customers are largely satisfied with the TrailRunner Hiking Boots, praising immediate comfort, strong wet-terrain grip, and durability, with the main suggestion being to offer a wider fit option.",
+    "generated_summary": ""
+  },
+  {
+    "id": "sum_05",
+    "keyword": "CloudSync Backup App",
+    "reference_summary": "Multiple customers report being incorrectly double-billed for CloudSync's premium subscription, with refund requests going unresolved for days, despite otherwise positive impressions of the app's syncing performance.",
+    "generated_summary": "- It's not clear what caused the charges to be made again after they were paid off last year\n   \n   - There are no complaints of any issues with the service itself (no errors)"
+  },
+  {
+    "id": "sum_06",
+    "keyword": "PowerMax Portable Charger",
+    "reference_summary": "Customers are highly satisfied with the PowerMax Portable Charger's advertised capacity, fast charging, and compact design, with the only minor request being the addition of wireless charging support.",
+    "generated_summary": ""
+  },
+  {
+    "id": "sum_07",
+    "keyword": "StreamCast 4K Dongle",
+    "reference_summary": "Customers find the StreamCast 4K Dongle's picture quality strong, but frequent software bugs such as setup freezes, app crashes, and remote disconnections are undermining the experience, and support's generic troubleshooting has not addressed the root cause.",
+    "generated_summary": ""
+  },
+  {
+    "id": "sum_08",
+    "keyword": "UrbanCommute Backpack",
+    "reference_summary": "Several customers report early hardware failures with the UrbanCommute Backpack, especially broken zippers and loose stitching, and describe the replacement process through customer support as slow, often taking weeks.",
+    "generated_summary": "The user has been unhappy with their apartment due mainly because they found that there was no support from the landlord after only using the apartment once per day which caused them frustration as well as disappointment when trying to find an alternative solution at other times during the same period (e-mail)."
+  }
+]

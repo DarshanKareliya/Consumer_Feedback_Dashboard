@@ -1,0 +1,94 @@
+import json
+
+# Business-friendly label names must exactly match ISSUE_CATEGORY_MAPPING values in category.py:
+# "Bug / Software Defect", "Hardware / Physical Defect", "Shipping / Delivery Delay",
+# "Billing / Refund Dispute", "Customer Service / Support Issue", "Feature Request / Missing Functionality"
+# An empty list means none of the 6 categories clearly apply (falls back to "General Dissatisfaction" in the app).
+
+data = [
+    {"text": "The app crashes every time I try to open the settings menu, completely unusable now.",
+     "labels": ["Bug / Software Defect"]},
+    {"text": "My phone screen has a dead pixel cluster right out of the box, clearly a manufacturing defect.",
+     "labels": ["Hardware / Physical Defect"]},
+    {"text": "I ordered this two weeks ago and the tracking page still says label created, nothing has moved.",
+     "labels": ["Shipping / Delivery Delay"]},
+    {"text": "I was billed twice for the same subscription and support won't issue a refund for the duplicate charge.",
+     "labels": ["Billing / Refund Dispute"]},
+    {"text": "I've emailed support five times about my broken order and nobody has replied in three weeks.",
+     "labels": ["Customer Service / Support Issue"]},
+    {"text": "This is a good product but it really needs a dark mode option, I can't use it comfortably at night.",
+     "labels": ["Feature Request / Missing Functionality"]},
+    {"text": "The update bricked my device and now customer support is refusing to help me fix it.",
+     "labels": ["Bug / Software Defect", "Customer Service / Support Issue"]},
+    {"text": "The charging port fell out of the housing after a week and the seller won't process my refund for the defective unit.",
+     "labels": ["Hardware / Physical Defect", "Billing / Refund Dispute"]},
+    {"text": "The package arrived a month late and when I called about it, the agent just hung up on me.",
+     "labels": ["Shipping / Delivery Delay", "Customer Service / Support Issue"]},
+    {"text": "I was charged an extra shipping fee that wasn't in my order summary and support keeps giving different answers.",
+     "labels": ["Billing / Refund Dispute", "Customer Service / Support Issue"]},
+    {"text": "The app keeps logging me out randomly and it desperately needs a stay signed in option.",
+     "labels": ["Bug / Software Defect", "Feature Request / Missing Functionality"]},
+    {"text": "The hinge on the laptop cracked after light use, and I still haven't received my refund three weeks later.",
+     "labels": ["Hardware / Physical Defect", "Billing / Refund Dispute"]},
+    {"text": "The export feature just freezes the whole application every single time I click it.",
+     "labels": ["Bug / Software Defect"]},
+    {"text": "The remote control's buttons stopped responding within days, feels like a cheap defective part.",
+     "labels": ["Hardware / Physical Defect"]},
+    {"text": "Delivery has been rescheduled four times now with no explanation from the courier or the seller.",
+     "labels": ["Shipping / Delivery Delay"]},
+    {"text": "My refund was approved two weeks ago but the money still hasn't shown up in my account.",
+     "labels": ["Billing / Refund Dispute"]},
+    {"text": "Support keeps transferring me between departments and nobody actually resolves my issue.",
+     "labels": ["Customer Service / Support Issue"]},
+    {"text": "It would be great if the app supported exporting reports to CSV, that's the one thing missing for me.",
+     "labels": ["Feature Request / Missing Functionality"]},
+    {"text": "The notifications never fire on time, it's clearly a bug in the latest release.",
+     "labels": ["Bug / Software Defect"]},
+    {"text": "The case arrived cracked in two places, obviously damaged before it even shipped.",
+     "labels": ["Hardware / Physical Defect"]},
+    {"text": "The courier marked it as delivered but nothing was left at my door, and now I'm being told to just wait.",
+     "labels": ["Shipping / Delivery Delay", "Customer Service / Support Issue"]},
+    {"text": "I cancelled my subscription in March but I'm still being billed every month.",
+     "labels": ["Billing / Refund Dispute"]},
+    {"text": "Waited on hold for over an hour just to be told to email a different department.",
+     "labels": ["Customer Service / Support Issue"]},
+    {"text": "Please add support for multiple accounts, having to log out and back in constantly is painful.",
+     "labels": ["Feature Request / Missing Functionality"]},
+    {"text": "The sync feature loses my data whenever I switch devices, a serious bug that needs fixing.",
+     "labels": ["Bug / Software Defect"]},
+    {"text": "The strap snapped on the second day of normal use, definitely a quality control issue.",
+     "labels": ["Hardware / Physical Defect"]},
+    {"text": "This has been sitting at the same distribution center for ten days with no updates.",
+     "labels": ["Shipping / Delivery Delay"]},
+    {"text": "Honestly, this whole experience has just been disappointing from start to finish.",
+     "labels": []},
+    {"text": "Not what I expected at all, I'm just generally unhappy with how this turned out.",
+     "labels": []},
+    {"text": "I don't even know what went wrong, but I regret buying this.",
+     "labels": []},
+    {"text": "The invoice shows the wrong tax amount and support says it's correct, but the math doesn't add up.",
+     "labels": ["Billing / Refund Dispute"]},
+    {"text": "It would help a lot if there was an offline mode, I lose access every time my connection drops.",
+     "labels": ["Feature Request / Missing Functionality"]},
+    {"text": "The screen flickers randomly and a replacement unit arrived with the exact same defect.",
+     "labels": ["Hardware / Physical Defect"]},
+    {"text": "My order shows delivered to a completely different city according to the tracking details.",
+     "labels": ["Shipping / Delivery Delay"]},
+    {"text": "Every time I contact support about the crash, they close the ticket without actually fixing the bug.",
+     "labels": ["Bug / Software Defect", "Customer Service / Support Issue"]},
+    {"text": "I keep getting logged out mid task and there's still no way to enable biometric login.",
+     "labels": ["Bug / Software Defect", "Feature Request / Missing Functionality"]},
+]
+
+with open("/home/claude/eval_project/data/issue_categorization_gold.json", "w", encoding="utf-8") as f:
+    json.dump(data, f, indent=2)
+
+print(f"Wrote {len(data)} examples")
+from collections import Counter
+c = Counter()
+for d in data:
+    for l in d["labels"]:
+        c[l] += 1
+    if not d["labels"]:
+        c["(none / General Dissatisfaction)"] += 1
+print(c)

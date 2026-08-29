@@ -1,0 +1,473 @@
+[
+  {
+    "text": "The app crashes every time I try to open the settings menu, completely unusable now.",
+    "true_labels": [
+      "Bug / Software Defect"
+    ],
+    "predicted_labels": [
+      "Bug / Software Defect",
+      "Customer Service / Support Issue",
+      "Feature Request / Missing Functionality",
+      "Hardware / Physical Defect",
+      "Shipping / Delivery Delay"
+    ]
+  },
+  {
+    "text": "My phone screen has a dead pixel cluster right out of the box, clearly a manufacturing defect.",
+    "true_labels": [
+      "Hardware / Physical Defect"
+    ],
+    "predicted_labels": [
+      "Bug / Software Defect",
+      "Feature Request / Missing Functionality",
+      "Hardware / Physical Defect"
+    ]
+  },
+  {
+    "text": "I ordered this two weeks ago and the tracking page still says label created, nothing has moved.",
+    "true_labels": [
+      "Shipping / Delivery Delay"
+    ],
+    "predicted_labels": [
+      "Bug / Software Defect",
+      "Customer Service / Support Issue",
+      "Feature Request / Missing Functionality",
+      "Hardware / Physical Defect",
+      "Shipping / Delivery Delay"
+    ]
+  },
+  {
+    "text": "I was billed twice for the same subscription and support won't issue a refund for the duplicate charge.",
+    "true_labels": [
+      "Billing / Refund Dispute"
+    ],
+    "predicted_labels": [
+      "Billing / Refund Dispute",
+      "Bug / Software Defect",
+      "Customer Service / Support Issue",
+      "Feature Request / Missing Functionality",
+      "Hardware / Physical Defect",
+      "Shipping / Delivery Delay"
+    ]
+  },
+  {
+    "text": "I've emailed support five times about my broken order and nobody has replied in three weeks.",
+    "true_labels": [
+      "Customer Service / Support Issue"
+    ],
+    "predicted_labels": [
+      "Billing / Refund Dispute",
+      "Bug / Software Defect",
+      "Customer Service / Support Issue",
+      "Feature Request / Missing Functionality",
+      "Hardware / Physical Defect",
+      "Shipping / Delivery Delay"
+    ]
+  },
+  {
+    "text": "This is a good product but it really needs a dark mode option, I can't use it comfortably at night.",
+    "true_labels": [
+      "Feature Request / Missing Functionality"
+    ],
+    "predicted_labels": [
+      "Bug / Software Defect",
+      "Customer Service / Support Issue",
+      "Feature Request / Missing Functionality",
+      "Hardware / Physical Defect"
+    ]
+  },
+  {
+    "text": "The update bricked my device and now customer support is refusing to help me fix it.",
+    "true_labels": [
+      "Bug / Software Defect",
+      "Customer Service / Support Issue"
+    ],
+    "predicted_labels": [
+      "Billing / Refund Dispute",
+      "Bug / Software Defect",
+      "Customer Service / Support Issue",
+      "Feature Request / Missing Functionality",
+      "Hardware / Physical Defect",
+      "Shipping / Delivery Delay"
+    ]
+  },
+  {
+    "text": "The charging port fell out of the housing after a week and the seller won't process my refund for the defective unit.",
+    "true_labels": [
+      "Billing / Refund Dispute",
+      "Hardware / Physical Defect"
+    ],
+    "predicted_labels": [
+      "Billing / Refund Dispute",
+      "Bug / Software Defect",
+      "Customer Service / Support Issue",
+      "Feature Request / Missing Functionality",
+      "Hardware / Physical Defect",
+      "Shipping / Delivery Delay"
+    ]
+  },
+  {
+    "text": "The package arrived a month late and when I called about it, the agent just hung up on me.",
+    "true_labels": [
+      "Customer Service / Support Issue",
+      "Shipping / Delivery Delay"
+    ],
+    "predicted_labels": [
+      "Billing / Refund Dispute",
+      "Bug / Software Defect",
+      "Customer Service / Support Issue",
+      "Feature Request / Missing Functionality",
+      "Hardware / Physical Defect",
+      "Shipping / Delivery Delay"
+    ]
+  },
+  {
+    "text": "I was charged an extra shipping fee that wasn't in my order summary and support keeps giving different answers.",
+    "true_labels": [
+      "Billing / Refund Dispute",
+      "Customer Service / Support Issue"
+    ],
+    "predicted_labels": [
+      "Billing / Refund Dispute",
+      "Bug / Software Defect",
+      "Customer Service / Support Issue",
+      "Feature Request / Missing Functionality",
+      "Hardware / Physical Defect",
+      "Shipping / Delivery Delay"
+    ]
+  },
+  {
+    "text": "The app keeps logging me out randomly and it desperately needs a stay signed in option.",
+    "true_labels": [
+      "Bug / Software Defect",
+      "Feature Request / Missing Functionality"
+    ],
+    "predicted_labels": [
+      "Bug / Software Defect",
+      "Customer Service / Support Issue",
+      "Feature Request / Missing Functionality",
+      "Hardware / Physical Defect",
+      "Shipping / Delivery Delay"
+    ]
+  },
+  {
+    "text": "The hinge on the laptop cracked after light use, and I still haven't received my refund three weeks later.",
+    "true_labels": [
+      "Billing / Refund Dispute",
+      "Hardware / Physical Defect"
+    ],
+    "predicted_labels": [
+      "Billing / Refund Dispute",
+      "Bug / Software Defect",
+      "Customer Service / Support Issue",
+      "Feature Request / Missing Functionality",
+      "Hardware / Physical Defect",
+      "Shipping / Delivery Delay"
+    ]
+  },
+  {
+    "text": "The export feature just freezes the whole application every single time I click it.",
+    "true_labels": [
+      "Bug / Software Defect"
+    ],
+    "predicted_labels": [
+      "Bug / Software Defect",
+      "Customer Service / Support Issue",
+      "Feature Request / Missing Functionality",
+      "Hardware / Physical Defect",
+      "Shipping / Delivery Delay"
+    ]
+  },
+  {
+    "text": "The remote control's buttons stopped responding within days, feels like a cheap defective part.",
+    "true_labels": [
+      "Hardware / Physical Defect"
+    ],
+    "predicted_labels": [
+      "Bug / Software Defect",
+      "Customer Service / Support Issue",
+      "Feature Request / Missing Functionality",
+      "Hardware / Physical Defect"
+    ]
+  },
+  {
+    "text": "Delivery has been rescheduled four times now with no explanation from the courier or the seller.",
+    "true_labels": [
+      "Shipping / Delivery Delay"
+    ],
+    "predicted_labels": [
+      "Billing / Refund Dispute",
+      "Bug / Software Defect",
+      "Customer Service / Support Issue",
+      "Feature Request / Missing Functionality",
+      "Hardware / Physical Defect",
+      "Shipping / Delivery Delay"
+    ]
+  },
+  {
+    "text": "My refund was approved two weeks ago but the money still hasn't shown up in my account.",
+    "true_labels": [
+      "Billing / Refund Dispute"
+    ],
+    "predicted_labels": [
+      "Billing / Refund Dispute",
+      "Bug / Software Defect",
+      "Customer Service / Support Issue",
+      "Feature Request / Missing Functionality",
+      "Hardware / Physical Defect",
+      "Shipping / Delivery Delay"
+    ]
+  },
+  {
+    "text": "Support keeps transferring me between departments and nobody actually resolves my issue.",
+    "true_labels": [
+      "Customer Service / Support Issue"
+    ],
+    "predicted_labels": [
+      "Billing / Refund Dispute",
+      "Bug / Software Defect",
+      "Customer Service / Support Issue",
+      "Feature Request / Missing Functionality",
+      "Hardware / Physical Defect",
+      "Shipping / Delivery Delay"
+    ]
+  },
+  {
+    "text": "It would be great if the app supported exporting reports to CSV, that's the one thing missing for me.",
+    "true_labels": [
+      "Feature Request / Missing Functionality"
+    ],
+    "predicted_labels": [
+      "Bug / Software Defect",
+      "Customer Service / Support Issue",
+      "Feature Request / Missing Functionality",
+      "Hardware / Physical Defect"
+    ]
+  },
+  {
+    "text": "The notifications never fire on time, it's clearly a bug in the latest release.",
+    "true_labels": [
+      "Bug / Software Defect"
+    ],
+    "predicted_labels": [
+      "Billing / Refund Dispute",
+      "Bug / Software Defect",
+      "Customer Service / Support Issue",
+      "Feature Request / Missing Functionality",
+      "Hardware / Physical Defect",
+      "Shipping / Delivery Delay"
+    ]
+  },
+  {
+    "text": "The case arrived cracked in two places, obviously damaged before it even shipped.",
+    "true_labels": [
+      "Hardware / Physical Defect"
+    ],
+    "predicted_labels": [
+      "Bug / Software Defect",
+      "Customer Service / Support Issue",
+      "Feature Request / Missing Functionality",
+      "Hardware / Physical Defect",
+      "Shipping / Delivery Delay"
+    ]
+  },
+  {
+    "text": "The courier marked it as delivered but nothing was left at my door, and now I'm being told to just wait.",
+    "true_labels": [
+      "Customer Service / Support Issue",
+      "Shipping / Delivery Delay"
+    ],
+    "predicted_labels": [
+      "Bug / Software Defect",
+      "Customer Service / Support Issue",
+      "Feature Request / Missing Functionality",
+      "Hardware / Physical Defect",
+      "Shipping / Delivery Delay"
+    ]
+  },
+  {
+    "text": "I cancelled my subscription in March but I'm still being billed every month.",
+    "true_labels": [
+      "Billing / Refund Dispute"
+    ],
+    "predicted_labels": [
+      "Billing / Refund Dispute",
+      "Bug / Software Defect",
+      "Customer Service / Support Issue",
+      "Feature Request / Missing Functionality"
+    ]
+  },
+  {
+    "text": "Waited on hold for over an hour just to be told to email a different department.",
+    "true_labels": [
+      "Customer Service / Support Issue"
+    ],
+    "predicted_labels": [
+      "Bug / Software Defect",
+      "Customer Service / Support Issue",
+      "Feature Request / Missing Functionality",
+      "Hardware / Physical Defect",
+      "Shipping / Delivery Delay"
+    ]
+  },
+  {
+    "text": "Please add support for multiple accounts, having to log out and back in constantly is painful.",
+    "true_labels": [
+      "Feature Request / Missing Functionality"
+    ],
+    "predicted_labels": [
+      "Billing / Refund Dispute",
+      "Bug / Software Defect",
+      "Customer Service / Support Issue",
+      "Feature Request / Missing Functionality"
+    ]
+  },
+  {
+    "text": "The sync feature loses my data whenever I switch devices, a serious bug that needs fixing.",
+    "true_labels": [
+      "Bug / Software Defect"
+    ],
+    "predicted_labels": [
+      "Bug / Software Defect",
+      "Customer Service / Support Issue",
+      "Feature Request / Missing Functionality",
+      "Hardware / Physical Defect"
+    ]
+  },
+  {
+    "text": "The strap snapped on the second day of normal use, definitely a quality control issue.",
+    "true_labels": [
+      "Hardware / Physical Defect"
+    ],
+    "predicted_labels": [
+      "Bug / Software Defect",
+      "Customer Service / Support Issue",
+      "Feature Request / Missing Functionality",
+      "Hardware / Physical Defect",
+      "Shipping / Delivery Delay"
+    ]
+  },
+  {
+    "text": "This has been sitting at the same distribution center for ten days with no updates.",
+    "true_labels": [
+      "Shipping / Delivery Delay"
+    ],
+    "predicted_labels": [
+      "Bug / Software Defect",
+      "Customer Service / Support Issue",
+      "Feature Request / Missing Functionality",
+      "Hardware / Physical Defect",
+      "Shipping / Delivery Delay"
+    ]
+  },
+  {
+    "text": "Honestly, this whole experience has just been disappointing from start to finish.",
+    "true_labels": [],
+    "predicted_labels": [
+      "Billing / Refund Dispute",
+      "Bug / Software Defect",
+      "Customer Service / Support Issue",
+      "Feature Request / Missing Functionality",
+      "Hardware / Physical Defect",
+      "Shipping / Delivery Delay"
+    ]
+  },
+  {
+    "text": "Not what I expected at all, I'm just generally unhappy with how this turned out.",
+    "true_labels": [],
+    "predicted_labels": [
+      "Bug / Software Defect",
+      "Customer Service / Support Issue",
+      "Feature Request / Missing Functionality",
+      "Hardware / Physical Defect",
+      "Shipping / Delivery Delay"
+    ]
+  },
+  {
+    "text": "I don't even know what went wrong, but I regret buying this.",
+    "true_labels": [],
+    "predicted_labels": [
+      "Billing / Refund Dispute",
+      "Bug / Software Defect",
+      "Customer Service / Support Issue",
+      "Feature Request / Missing Functionality",
+      "Hardware / Physical Defect",
+      "Shipping / Delivery Delay"
+    ]
+  },
+  {
+    "text": "The invoice shows the wrong tax amount and support says it's correct, but the math doesn't add up.",
+    "true_labels": [
+      "Billing / Refund Dispute"
+    ],
+    "predicted_labels": [
+      "Billing / Refund Dispute",
+      "Bug / Software Defect",
+      "Customer Service / Support Issue",
+      "Feature Request / Missing Functionality",
+      "Shipping / Delivery Delay"
+    ]
+  },
+  {
+    "text": "It would help a lot if there was an offline mode, I lose access every time my connection drops.",
+    "true_labels": [
+      "Feature Request / Missing Functionality"
+    ],
+    "predicted_labels": [
+      "Bug / Software Defect",
+      "Customer Service / Support Issue",
+      "Feature Request / Missing Functionality",
+      "Hardware / Physical Defect"
+    ]
+  },
+  {
+    "text": "The screen flickers randomly and a replacement unit arrived with the exact same defect.",
+    "true_labels": [
+      "Hardware / Physical Defect"
+    ],
+    "predicted_labels": [
+      "Bug / Software Defect",
+      "Customer Service / Support Issue",
+      "Feature Request / Missing Functionality",
+      "Hardware / Physical Defect"
+    ]
+  },
+  {
+    "text": "My order shows delivered to a completely different city according to the tracking details.",
+    "true_labels": [
+      "Shipping / Delivery Delay"
+    ],
+    "predicted_labels": [
+      "Bug / Software Defect",
+      "Customer Service / Support Issue",
+      "Hardware / Physical Defect",
+      "Shipping / Delivery Delay"
+    ]
+  },
+  {
+    "text": "Every time I contact support about the crash, they close the ticket without actually fixing the bug.",
+    "true_labels": [
+      "Bug / Software Defect",
+      "Customer Service / Support Issue"
+    ],
+    "predicted_labels": [
+      "Bug / Software Defect",
+      "Customer Service / Support Issue",
+      "Feature Request / Missing Functionality",
+      "Hardware / Physical Defect"
+    ]
+  },
+  {
+    "text": "I keep getting logged out mid task and there's still no way to enable biometric login.",
+    "true_labels": [
+      "Bug / Software Defect",
+      "Feature Request / Missing Functionality"
+    ],
+    "predicted_labels": [
+      "Bug / Software Defect",
+      "Customer Service / Support Issue",
+      "Feature Request / Missing Functionality",
+      "Hardware / Physical Defect"
+    ]
+  }
+]
