@@ -176,7 +176,7 @@ function IssueInsight({
           </p>
         </div>
 
-        <button
+        {/* <button
           onClick={onClear}
           style={{
             padding: "0.5rem 1rem",
@@ -187,7 +187,7 @@ function IssueInsight({
           }}
         >
           Clear
-        </button>
+        </button> */}
       </div>
 
       {/* Summary */}

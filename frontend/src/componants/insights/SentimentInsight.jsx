@@ -89,7 +89,7 @@ function SentimentInsight({
             Detailed analysis of {sentiment.toLowerCase()} feedback.
           </p>
         </div>
-
+{/* 
         <button
           onClick={onClear}
           style={{
@@ -101,7 +101,7 @@ function SentimentInsight({
           }}
         >
           Clear
-        </button>
+        </button> */}
       </div>
 
       {/* Summary */}

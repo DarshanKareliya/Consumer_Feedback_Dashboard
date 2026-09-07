@@ -109,7 +109,7 @@ function PlatformInsight({
             Sentiment and issue analysis for {platform}.
           </p>
         </div>
-
+{/* 
         <button
           onClick={onClear}
           style={{
@@ -121,7 +121,7 @@ function PlatformInsight({
           }}
         >
           Clear
-        </button>
+        </button> */}
       </div>
 
       {/* Summary */}
