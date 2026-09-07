@@ -9,6 +9,9 @@ import amazon
 import youtube
 import category
 import logging
+# import issue_categorization_llm as category  # instead of import category
+
+from review_filter_mlx import filter_reviews  
 
 logging.basicConfig(level=logging.INFO)
 
@@ -36,41 +39,14 @@ def predict_sentiment(source_name, texts):
     return predicted_sentiments
 
 
-# call from flask
-# predictions = predict_sentiment(comments_list)
-
-# results = [
-#     {
-#         "text": text,
-#         "sentiment": sentiment
-#     }
-#     for text, sentiment in zip(comments_list, predictions)
-# ]
-
-
-# with open("sentiment.json", "w", encoding="utf-8") as file:
-#     json.dump(results, file, ensure_ascii=False, indent=4)
-
-# ########################################################
-
-
-# def process_reviews(source_name, reviews):
-#     """Method C: This runs immediately as soon as ANY scraper finishes."""
-#     print(f"\n[Method C] Processing results from: {source_name}")
-#     print(f"Received {len(reviews)} items.")
-#     # Add your logic here (e.g., sentiment analysis, saving to DB, summarization, etc.)
-#     for review in reviews[:3]:  # Print first 3 for demo
-#         print(f"  - {review[:100]}...")
-
-
 def run_pipeline(product_name):
-    # Map the scraper function to a human-readable source name
+    # YouTube comments are passed through the Qwen3 review filter first,
     tasks_map = {
-        "YouTube": lambda: youtube.get_youtube_comments(product_name),
+        "YouTube": lambda: filter_reviews(youtube.get_youtube_comments(product_name)),
         "Amazon": lambda: amazon.get_amazon_reviews(product_name)
     }
 
-    # 1. Create a dictionary to hold the final aggregated data
+    # Create a dictionary to hold the final aggregated data
     final_aggregated_data = {}
 
     # Run both methods in parallel threads
@@ -85,14 +61,13 @@ def run_pipeline(product_name):
         for future in as_completed(future_to_source):
             source_name = future_to_source[future]
             try:
-                result = future.result()  # This is your scraped text list
+                result = future.result()  # This is your scraped (and, for YouTube, review-filtered) text list
 
-                # Check if result is a valid list of reviews
+                # Check for valid list of reviews
                 if isinstance(result, list):
                     # Run inference
                     predictions = predict_sentiment(source_name, result)
 
-                    
                     formatted_results = [
                         {
                             "text": text,
@@ -116,7 +91,7 @@ def run_pipeline(product_name):
 
                     categorized_negative_items = category.categorize_negative_feedback(
                         negative_items,
-                        threshold=0.45
+                        threshold=0.85
                     )
 
                     for item in non_negative_items:
@@ -126,7 +101,6 @@ def run_pipeline(product_name):
                         item["issue_scores"] = {}
                         item["actions"] = []
 
-
                     for item in categorized_negative_items:
                         item["actions"] = [
                             category.CATEGORY_ACTIONS.get(
@@ -134,7 +108,6 @@ def run_pipeline(product_name):
                             for issue in item["issue_categories"]
                         ]
 
-                    
                     all_results = non_negative_items + categorized_negative_items
 
                     final_aggregated_data[source_name] = all_results
@@ -149,7 +122,7 @@ def run_pipeline(product_name):
                 print(f"[{source_name}] Generated an exception: {exc}")
                 final_aggregated_data[source_name] = {"error": str(exc)}
 
-    # 2. Return the populated dictionary so Flask can send it to React
+    # Return the dictionary
     return final_aggregated_data
 
 

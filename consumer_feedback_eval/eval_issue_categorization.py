@@ -23,7 +23,7 @@ from metrics_utils import multilabel_report, save_json
 MODEL_NAME = "/Users/darshankareliya/.cache/huggingface/hub/models--cross-encoder--nli-deberta-v3-base/snapshots/6c749ce3425cd33b46d187e45b92bbf96ee12ec7"
 GOLD_JSON = "data/issue_categorization_gold.json"
 RESULTS_DIR = "results"
-THRESHOLD = 0.45  # same default threshold used in backend/category.py
+THRESHOLD = 0.99  # same default threshold used in backend/category.py
 
 # Must match ISSUE_CATEGORY_MAPPING in backend/category.py: model-facing hypothesis
 # label -> business-friendly label used in the gold data and the app's output.

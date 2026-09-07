@@ -2,12 +2,12 @@ import json
 from transformers import pipeline
 import torch
 
-# 1. Setup Device
+# setup device
 device = 0 if torch.cuda.is_available() else (
     -1 if not torch.backends.mps.is_available() else "mps"
 )
 
-# 2. Load classifier
+# load classifier
 classifier = pipeline(
     "zero-shot-classification",
     model="/Users/darshankareliya/.cache/huggingface/hub/models--cross-encoder--nli-deberta-v3-base/snapshots/6c749ce3425cd33b46d187e45b92bbf96ee12ec7",
@@ -39,14 +39,14 @@ CATEGORY_ACTIONS = {
 
 def categorize_negative_feedback(
     feedback_items: list,
-    threshold: float = 0.45,
+    threshold: float = 0.99,
     batch_size: int = 16
 ) -> list:
 
     if not feedback_items:
         return []
 
-    # Extract all texts
+    # get all texts
     texts = [
         item.get("text", "")
         for item in feedback_items
@@ -102,25 +102,4 @@ def categorize_negative_feedback(
 
     return enriched_results
 
-# Example Usage
-# if __name__ == "__main__":
-#     sample_data = [
-#         {
-#             "text": "The laptop screen flickers constantly and customer support refused to process my refund.",
-#             "sentiment": "Very Negative",
-#             "source": "YouTube"
-#         },
-#         {
-#             "text": "Amazing build quality and battery life lasts two full days!",
-#             "sentiment": "Very Positive",
-#             "source": "Reddit"
-#         },
-#         {
-#             "text": "Ordered 3 weeks ago, package still hasn't arrived and tracking is broken.",
-#             "sentiment": "Negative",
-#             "source": "Amazon"
-#         }
-#     ]
 
-#     results = categorize_negative_feedback(sample_data, threshold=0.95)
-#     print(json.dumps(results, indent=2))
